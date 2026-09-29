@@ -1,0 +1,3 @@
+/* Prevent protected page content from flashing before the session check completes. */
+html:not([data-auth-ready]) body { visibility: hidden; }
+html[data-auth-ready] body { visibility: visible; }
